@@ -1,4 +1,5 @@
 portfolio
 =========
 
-Portfolio site
+Portfolio site created in PHP using great Laravel Framework!
+
