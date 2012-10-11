@@ -34,6 +34,8 @@
 
 Route::get('/', function()
 {
+	return "<p>working root</p>";
+
 });
 
 /*
