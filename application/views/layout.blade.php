@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<header>
-			
+			@include('navbar')			
 		</header>
 		<div class="container">
 			
