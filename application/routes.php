@@ -34,7 +34,7 @@
 
 Route::get('/', function()
 {
-	return View::make('layout');
+	return View::make('home.index', array('someVar'=> "TESTSTSEVAL"));
 
 });
 
