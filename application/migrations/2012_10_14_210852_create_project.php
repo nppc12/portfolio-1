@@ -17,9 +17,10 @@ class Create_Project {
     $table->timestamps();
     $table->text('description');
 
-    $table->primary('id');
+    // Obviously not needed
+    //$table->primary('id');
     $table->unique('name');
-    
+
 });
 	}
 
