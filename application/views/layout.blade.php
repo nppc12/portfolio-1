@@ -11,18 +11,9 @@
 			@include('navbar')			
 		</header>
 		<div class="container">
-			@yield('content')
-			<!-- To ma byc inne w zaleznosci od widoku -->
-			<!-- <div class="row">
-				<div class="span9">##</div>
-				<div class="span3">##</div>
-			</div>
-			<div class="row">
-			2 kolumny ale z duza separacja
-			O mnie  i Formularz kontaktowy
-			--> 
-				
-			</div>
+			@yield('content') 
+			
+		</div>
 			@include('footer')
 		
 		</div>
