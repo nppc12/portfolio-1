@@ -13,10 +13,13 @@ class Create_Project {
     $table->increments('id');
     // varchar 32
     $table->string('name', 50);
-    $table->boolean('active');
+    $table->boolean('active')->default(true);
     $table->timestamps();
     $table->text('description');
 
+    $table->primary('id');
+    $table->unique('name');
+    
 });
 	}
 
