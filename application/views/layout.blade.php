@@ -3,6 +3,7 @@
 	<head>
 		<title></title>
 		{{ Asset::container('bootstrapper')->styles() }}
+		{{ Asset::container('bootstrapper')->scripts() }}
 		{{ HTML::style('css/reset.css') }}
 		{{ HTML::style('css/style.css') }}
 	</head>
