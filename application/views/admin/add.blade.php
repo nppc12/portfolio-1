@@ -2,15 +2,16 @@
 
 @section('content')
 <div class="uploadForm">
-	{{ Bootstrapper\Form::horizontal_open()}}
+	{{ Form::horizontal_open()}}
 
-	{{ Bootstrapper\Form::label('images[]', 'Screen')}}
+	{{ Form::label('images[]', 'Screen')}}
 	<input class="input-file" name="images[]" id="attachments" type="file" multiple>
 
 
 	{{Form::submit('Dodaj')}}
 	{{Form::close()}}
-	<button class="addImage">Dodaj Obrazek</button>
+	{{ Buttons::inverse_normal('Dodaj Obrazek', array('class' => 'addImage'))}}
+	<!-- <button class="addImage inverse_normal">Dodaj Obrazek</button> -->
 </div>
 
 <script type="text/javascript">
