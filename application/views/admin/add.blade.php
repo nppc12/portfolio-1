@@ -2,16 +2,22 @@
 
 @section('content')
 <div class="uploadForm">
-	{{ Form::horizontal_open()}}
+	<!-- Potrzebujemy tez nazwe projektu, dane o projekcie itd -->
+	<div class="row">
+		<div class="span9">
+			{{ Form::horizontal_open()}}
 
-	{{ Form::label('images[]', 'Screen')}}
-	<input class="input-file" name="images[]" id="attachments" type="file" multiple>
+			{{ Form::label('images[]', 'Screen')}}
+			<input class="input-file" name="images[]" id="attachments" type="file" multiple>
 
 
-	{{Form::submit('Dodaj')}}
-	{{Form::close()}}
-	{{ Buttons::inverse_normal('Dodaj Obrazek', array('class' => 'addImage'))}}
-	<!-- <button class="addImage inverse_normal">Dodaj Obrazek</button> -->
+			{{Form::submit('Dodaj')}}
+			{{Form::close()}}
+		</div>
+		<div class="span3">
+			{{ Buttons::inverse_normal('Dodaj kolejny screen', array('class' => 'addImage'))}}
+		</div>
+	</div>
 </div>
 
 <script type="text/javascript">
