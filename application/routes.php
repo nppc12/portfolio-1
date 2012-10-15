@@ -38,6 +38,9 @@ Route::get('/', function()
 
 });
 
+Route::any('admin/add', function(){
+	View::make('admin.add');
+});
 /*
 |--------------------------------------------------------------------------
 | Application 404 & 500 Error Handlers
