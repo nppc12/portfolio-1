@@ -17,4 +17,9 @@
         </ul>
       </li>
     </ul>
+    <script type="text/javascript">
+      $(document).ready( function() {
+        $('.dropdown-toggle').dropdown();
+      });
+    </script>
   </div>
