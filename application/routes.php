@@ -39,7 +39,7 @@ Route::get('/', function()
 });
 
 Route::any('admin/add', function(){
-	View::make('admin.add');
+	return View::make('admin.add');
 });
 /*
 |--------------------------------------------------------------------------
