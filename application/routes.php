@@ -38,9 +38,14 @@ Route::get('/', function()
 
 });
 
-Route::any('admin/add', function(){
+Route::get('admin/add', function(){
 	return View::make('admin.add');
 });
+
+Route::post('admin/add', array('as'=>'addProject', function(){
+	return 0;
+
+}));
 /*
 |--------------------------------------------------------------------------
 | Application 404 & 500 Error Handlers
