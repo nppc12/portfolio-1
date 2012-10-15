@@ -9,8 +9,10 @@ class Add_Deleteon {
 	 */
 	public function up()
 	{
-		Schema::update('projects', function($table){
-			$table->foreign('screen_id')-references('id')->on('screens')->on_delete(''); //don't know what
+		Schema::table('projects', function($table){
+
+			$table->foreign('screen_id')->references('id')->on('screens')->on_delete('cascade'); //don't know what
+		
 		});
 	}
 
