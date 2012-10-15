@@ -10,7 +10,10 @@
 			{{ Form::label('images[]', 'Screen')}}
 			<input class="input-file" name="images[]" id="attachments" type="file" multiple>
 
-
+			{{ Form::label('projectName', 'Nazwa projektu')}}
+			{{ Form::text('projectName') }}
+			{{ Form::label('projectDesc', 'Opis projektu')}}
+			{{ Form::textarea('projectDesc', '', array('rows'=>'5'))}}
 			{{Form::submit('Dodaj')}}
 			{{Form::close()}}
 		</div>
