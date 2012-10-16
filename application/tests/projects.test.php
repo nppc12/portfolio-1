@@ -1,11 +1,10 @@
 <?php
-// application/tests/example.test.php
+require_once('ControllerTestCase.php');
 class ProjectTest extends PHPUnit_Framework_TestCase {
-    /**
-     * Test that a given condition is met.
-     *
-     * @return void
-     */
+    
+    public function testShowingAdmin(){
+/*Nothing to test yet*/
+    }
 
     
 }
