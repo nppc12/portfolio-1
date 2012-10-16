@@ -6,8 +6,15 @@ class Project extends PHPUnit_Framework_TestCase {
      *
      * @return void
      */
-    public function testSomethingIsTrue()
-    {
-        $this->assertTrue(true);    
+    public function testOfTest(){
+    	$project = new Project; 
+    	$this->assertTrue($project instanceof Laravel\Database\Eloquent\Model
+);
     }
+
+    /*public function testCreatingProject()
+    {
+   		$project = Project::create(array('name'=>'testName', 'desc'=> 'desc'));
+		$this->assertTrue($project->save);    
+    }*/
 }
