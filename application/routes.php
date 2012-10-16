@@ -44,12 +44,11 @@ Route::get('admin/add', function(){
 
 Route::post('admin/add', array('as'=>'addProject', function(){
 	$rules = array('projectName'=>'required', 'projectDesc' => 'required');
-	$projectName = Input::get('projectName');
-	$projectDesc = Input::Get('projectDesc');
-	$validation = Validator::make(array('projectName' => $projectName, 'projectDesc'=>$projectDesc), 
-		$rules);
+	$fields = Input::all();
+	$validation = Validator::make($fields, $rules);
 	if ($validation->fails()){
-		return $validation->errors();
+		// $validationErrors = $validation->errors->all();
+		return Redirect::to('admin/add')->with_errors($validation);
 	}
 
 }));

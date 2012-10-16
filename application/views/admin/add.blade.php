@@ -1,6 +1,10 @@
 @layout('layout')
 
 @section('content')
+<!-- MOCK, need to add rest of fields and some CSS (maybe thanks to bootstrapper) -->
+@if ($errors->has('projectName'))
+	{{ $errors->first('projectName') }}
+@endif
 <div class="uploadForm">
 	<!-- Potrzebujemy tez nazwe projektu, dane o projekcie itd -->
 	<div class="row">
