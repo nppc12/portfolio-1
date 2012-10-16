@@ -37,3 +37,24 @@ abstract class ControllerTestCase extends PHPUnit_Framework_TestCase
     }
 
 }
+
+/*
+How to use it
+
+    public function testSignupWithValidData()
+    {
+        $response = $this->post('account@signup', array(
+            'username' => 'validusername',
+            'email' => 'some@validemail.com',
+            'password' => 'passw0rd',
+            'password_confirm' => 'passw0rd',
+        ));
+        $this->assertEquals('302', $response->foundation->getStatusCode());
+
+        $session_errors = \Laravel\Session::instance()->get('errors');
+        $this->assertNull($session_errors);
+    }
+
+}
+
+*/
