@@ -43,7 +43,14 @@ Route::get('admin/add', function(){
 });
 
 Route::post('admin/add', array('as'=>'addProject', function(){
-	return 0;
+	$rules = array('projectName'=>'required', 'projectDesc' => 'required');
+	$projectName = Input::get('projectName');
+	$projectDesc = Input::Get('projectDesc');
+	$validation = Validator::make(array('projectName' => $projectName, 'projectDesc'=>$projectDesc), 
+		$rules);
+	if ($validation->fails()){
+		return $validation->errors();
+	}
 
 }));
 /*
