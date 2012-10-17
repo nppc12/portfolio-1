@@ -1,3 +1,7 @@
 
-
+label {padding: 5px;}
+.uploadForm {/*padding: 15px;*/}
+.notif {padding:5px;}
+.error {font-weight: bold; color: red;}
+.message {font-weight: bold; color: green;}
 footer {color: gray; text-align: center;}

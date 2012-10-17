@@ -34,7 +34,7 @@
 
 Route::get('/', function()
 {
-	return View::make('home.index', array('someVar'=> "TESTSTSEVAL"));
+	return View::make('home.index');
 
 });
 
@@ -49,6 +49,10 @@ Route::post('admin/add', array('as'=>'addProject', function(){
 	if ($validation->fails()){
 		// $validationErrors = $validation->errors->all();
 		return Redirect::to('admin/add')->with_errors($validation);
+	}
+	$project = Project::create(array('name'=>$fields['projectName'], 'description'=>$fields['projectDesc']));
+	if ($project->save()) {
+		return View::make('admin/add', array('message'=>'Dodano nowy projekt!'));
 	}
 
 }));

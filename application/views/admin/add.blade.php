@@ -1,13 +1,23 @@
 @layout('layout')
 
 @section('content')
-<!-- MOCK, need to add rest of fields and some CSS (maybe thanks to bootstrapper) -->
+
 @if ($errors->has('projectName'))
+	<div class="error notif">
+	@if ($errors->has('projectDesc'))
+	{{ $errors->first('projectDesc') }}
+	@endif
 	{{ $errors->first('projectName') }}
+	</div>
 @endif
-<div class="uploadForm">
-	<!-- Potrzebujemy tez nazwe projektu, dane o projekcie itd -->
-	<div class="row">
+
+
+@if (isset($message))
+	<div class="message notif">{{ $message }}</div>
+@endif
+
+<div class="row">
+	<div class="uploadForm">
 		<div class="span9">
 			{{ Form::horizontal_open()}}
 
@@ -31,8 +41,12 @@
 	$('.addImage').on('click', function(){
 		//little dirty, would be nice to do it cleaner
 		$('<label for="images[]">Screen</label><input class="input-file" name="images[]" id="attachments" type="file" multiple>').insertAfter($('.input-file').last());
-		console.log("aa");
 	});
 
+	//maybe separate it.. maybe not
+	if ($('.notif').length > 0)
+	{
+		$('.notif').fadeOut(5000);
+	}
 </script>
 @endsection
