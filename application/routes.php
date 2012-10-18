@@ -66,20 +66,18 @@ Route::post('admin/add', array('as'=>'addProject', function(){
 			$screen = Screen::create(array('name' => $img['name']));
 			$screen->save();
 			$project->screens()->insert($screen);
-			
-			// save file
-			move_uploaded_file($img['tmp_name'], 'public/screenS/' . $img['name']);
-			// and resize it
-			//$f = File::open('public/screenS/'. $img['name']);
-			
-			/*$success = Resizer::open()
-    			->resize( 600 , 375 , 'auto')
+
+			move_uploaded_file($img['tmp_name'], 'public/screenS/' . $img['name']); 
+
+			$success = Resizer::open('public/screenS/'.$img['name'])
+    			->resize( 600, 375 , 'auto')
     			->save( 'public/screenS/toSlider/'. $img['name'], 90 ); 
-			if ($success) {
-				dd('should work');
+			
+			if (!$success) {
+				die('Resize failed');
 			}
-			What pass to Resizer::open? 
-			*/
+			
+			
 		}
 
 		return View::make('admin/add', array('message' => 'Dodano nowy projekt!'));
