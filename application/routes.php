@@ -64,7 +64,10 @@ Route::post('admin/add', array('as'=>'addProject', function(){
 			$screen = Screen::create(array('name' => $img['name']));
 			$screen->save();
 			$project->screens()->insert($screen);
-
+			
+			dd(array_get($_FILES, "images"));
+			Input::upload("images.0", 'screenS/', $img['name']);
+			
 			// Now i want to upload a file... 
 		}
 
