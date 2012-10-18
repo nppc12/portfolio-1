@@ -19,7 +19,7 @@
 <div class="row">
 	<div class="uploadForm">
 		<div class="span9">
-			{{ Form::horizontal_open()}}
+			{{ Form::horizontal_open_for_files() }}
 
 			{{ Form::label('images[]', 'Screen')}}
 			<input class="input-file" name="images[]" id="attachments" type="file" multiple>

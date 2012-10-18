@@ -47,12 +47,28 @@ Route::post('admin/add', array('as'=>'addProject', function(){
 	$fields = Input::all();
 	$validation = Validator::make($fields, $rules);
 	if ($validation->fails()){
-		// $validationErrors = $validation->errors->all();
 		return Redirect::to('admin/add')->with_errors($validation);
 	}
 	$project = Project::create(array('name'=>$fields['projectName'], 'description'=>$fields['projectDesc']));
 	if ($project->save()) {
-		return View::make('admin/add', array('message'=>'Dodano nowy projekt!'));
+		$images = Input::file('images');
+		for ($i=0; $i < sizeof($images['name']); $i++) { 
+			$img = array(
+					'name'      => $project->id . "-".$images['name'][$i],
+					'type'      => $images["type"][$i],
+					"tmp_name"  => $images["tmp_name"][$i],
+					"error"     => $images["error"][$i],
+					"size"      => $images["size"][$i],
+					);
+
+			$screen = Screen::create(array('name' => $img['name']));
+			$screen->save();
+			$project->screens()->insert($screen);
+
+			// Now i want to upload a file... 
+		}
+
+		return View::make('admin/add', array('message' => 'Dodano nowy projekt!'));
 	}
 
 }));
