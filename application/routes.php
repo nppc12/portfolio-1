@@ -70,13 +70,16 @@ Route::post('admin/add', array('as'=>'addProject', function(){
 			// save file
 			move_uploaded_file($img['tmp_name'], 'public/screenS/' . $img['name']);
 			// and resize it
-			$success = Resizer::open($img)
+			//$f = File::open('public/screenS/'. $img['name']);
+			
+			/*$success = Resizer::open()
     			->resize( 600 , 375 , 'auto')
     			->save( 'public/screenS/toSlider/'. $img['name'], 90 ); 
 			if ($success) {
 				dd('should work');
 			}
-
+			What pass to Resizer::open? 
+			*/
 		}
 
 		return View::make('admin/add', array('message' => 'Dodano nowy projekt!'));
