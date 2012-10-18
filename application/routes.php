@@ -43,6 +43,8 @@ Route::get('admin/add', function(){
 });
 
 Route::post('admin/add', array('as'=>'addProject', function(){
+	Bundle::start('resizer');
+
 	$rules = array('projectName'=>'required', 'projectDesc' => 'required');
 	$fields = Input::all();
 	$validation = Validator::make($fields, $rules);
@@ -65,10 +67,16 @@ Route::post('admin/add', array('as'=>'addProject', function(){
 			$screen->save();
 			$project->screens()->insert($screen);
 			
-			//dd(array_get($_FILES, "images"));
-			//Input::upload("images.0", 'public/screenS/', $img['name']);
+			// save file
 			move_uploaded_file($img['tmp_name'], 'public/screenS/' . $img['name']);
-			// Now i want to upload a file... 
+			// and resize it
+			$success = Resizer::open($img)
+    			->resize( 600 , 375 , 'auto')
+    			->save( 'public/screenS/toSlider/'. $img['name'], 90 ); 
+			if ($success) {
+				dd('should work');
+			}
+
 		}
 
 		return View::make('admin/add', array('message' => 'Dodano nowy projekt!'));
