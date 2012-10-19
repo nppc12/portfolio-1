@@ -2,13 +2,21 @@
 
 @section('content')
 <div class="row">
-	<div class="span5">
+	<div class="span3">
+			<div id="avatar">
+				{{HTML::image('img/avatar.jpg', "It's me")}}
+			</div>
+	</div>
+	<div class="span9">
+		@include('socials')
+	</div>
+</div>
+<div class="row">
+	<div class="span8 offset2">
 		<section id="aboutme">
 
 			<h2>O mnie</h2>
-			<div id="avatar">
-				{{HTML::image('img/avatar', "It's me")}}
-			</div>
+
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

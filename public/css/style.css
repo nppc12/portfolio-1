@@ -1,4 +1,23 @@
 
+#avatar{
+	width: 200px;
+    height: 200px;
+	border-radius: 10px;
+	padding:5px;
+	background-color: #000;
+}
+#aboutme p{padding:25px;}
+#socials {float:right;}
+#socials li {float:left;margin-right:5px; }
+#socials img {width:75px; height:75px;}
+#socials img {
+	opacity: 0.5;
+	filter: alpha(opacity=60);
+	}	
+#socials img:hover {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	}
 label {padding: 5px;}
 .uploadForm {/*padding: 15px;*/}
 .notif {padding:5px;}
