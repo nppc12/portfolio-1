@@ -38,6 +38,12 @@ Route::get('/', function()
 
 });
 
+Route::get('about', array('as'=>'about', function(){
+	return View::make('home.about');
+}));
+
+
+
 Route::get('admin/add', function(){
 	return View::make('admin.add');
 });

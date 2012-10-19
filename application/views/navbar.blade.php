@@ -3,7 +3,8 @@
     {{HTML::link('/', 'Strona Główna', array('class' =>'brand'))}}
     <ul class="nav">
       <!-- Class active need todo -->
-      <li><a href="#">O mnie</a></li>
+      <!-- LINK -->
+      <li>{{HTML::link_to_route('about', 'O mnie')}}</li>
       <li><a href="#">Wszystkie projekty</a></li>
       <li><a href="#">Wykorzystywane technologie</a></li>
     </ul>
