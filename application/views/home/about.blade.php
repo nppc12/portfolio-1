@@ -15,7 +15,7 @@
 	<div class="span8 offset2">
 		<section id="aboutme">
 
-			<h2>O mnie</h2>
+			<h1>O mnie</h1>
 
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

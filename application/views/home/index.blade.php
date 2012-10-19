@@ -1,6 +1,23 @@
 @layout('layout')
 
 @section('content')
-<p>test</p>
+<div class="row">
+	<h3 class="nivo-header">Ostatnio wykonany projekt.</h3>
+	<div class="slider-wrapper theme-default">
+	            <div id="slider" class="nivoSlider">
+	                <img src="img/nivo/twitter.png" data-thumb="img/nivo/twitter.png" alt="" />
+	                <a href="#"><img src="img/nivo/dp.png" data-thumb="img/nivo/dp.png" alt="" title="Strona dla wedkarzy" /></a>
+
+	            </div>
+	</div>
+</div>
+{{ HTML::script('js/jquery.nivo.slider.js') }}
+<script type="text/javascript">
+	(function(){
+		$('#slider').nivoSlider();
+		console.log('work');
+	})();
+
+</script>
 
 @endsection
