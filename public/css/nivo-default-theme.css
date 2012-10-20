@@ -10,7 +10,10 @@ Supports Thumbs: true
 
 h3.nivo-header {
 	text-align: center;
-	font-size: 2em;
+	/*font-size: 2em;*/
+	margin:25px;
+	font-family: 'Rye', serif;
+	font-size: 44px;
 }
 .slider-wrapper {
 	width: 600px;

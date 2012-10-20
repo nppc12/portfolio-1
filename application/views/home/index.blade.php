@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="row">
-	<h3 class="nivo-header">Ostatnio wykonany projekt.</h3>
+	<h3 class="nivo-header">Ostatnio wykonany projekt</h3>
 	<div class="slider-wrapper theme-default">
 	            <div id="slider" class="nivoSlider">
 	                <img src="img/nivo/twitter.png" data-thumb="img/nivo/twitter.png" alt="" />
@@ -14,7 +14,9 @@
 {{ HTML::script('js/jquery.nivo.slider.js') }}
 <script type="text/javascript">
 	(function(){
-		$('#slider').nivoSlider();
+		$('#slider').nivoSlider({
+			 pauseTime: 7000
+		});
 		console.log('work');
 	})();
 

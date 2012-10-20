@@ -6,9 +6,11 @@
 		{{ Asset::container('bootstrapper')->scripts() }}
 		{{ HTML::style('css/reset.css') }}
 		{{ HTML::style('css/style.css') }}
+		{{ HTML::style('http://fonts.googleapis.com/css?family=Rye')}}
 		{{ HTML::script('js/jquery.nivo.slider.js') }}
 		{{ HTML::style('css/nivo-slider.css') }}
 		{{ HTML::style('css/nivo-default-theme.css') }}
+
 	</head>
 	<body>
 		<header>

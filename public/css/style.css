@@ -1,6 +1,13 @@
+
 body{
-	background-image: url('../img/bg1.png');
+	/*background-image: url('../img/bg1.png');*/
+	background: -webkit-radial-gradient(circle, #fff, #1B1B1B);
+
 }
+.navbar a{
+	/*font-size: 0.7em;*/
+}
+
 #avatar{
 	width: 200px;
     height: 200px;
@@ -9,7 +16,10 @@ body{
 	background-color: #000;
 }
 #aboutme h1{
+	margin-top:10px;
 	text-align: center;
+	font-family: 'Rye', cursive;
+	font-size: 48px;
 }
 #aboutme {
 	margin:10px;
@@ -20,6 +30,9 @@ body{
 }
 #aboutme p{
 	padding:25px;
+	color: #000;
+	line-height: 1.3em;
+	font-family: 'Rye', cursive;
 }
 #socials {float:right;}
 #socials li {float:left;margin-right:5px; }
