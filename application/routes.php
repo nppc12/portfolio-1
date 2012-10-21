@@ -35,7 +35,8 @@
 Route::get('/', function()
 {
 	$project = Project::order_by('id', 'desc')->take(1)->get();
-	return View::make('home.index');
+	//dd($project);
+	return View::make('home.index', array('project'=>$project));
 
 });
 

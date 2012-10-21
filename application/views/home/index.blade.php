@@ -11,6 +11,10 @@
 	            </div>
 	</div>
 </div>
+
+<?php
+	echo $project->id; 
+?>
 {{ HTML::script('js/jquery.nivo.slider.js') }}
 <script type="text/javascript">
 	(function(){
