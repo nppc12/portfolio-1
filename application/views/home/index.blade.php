@@ -15,7 +15,7 @@
 <script type="text/javascript">
 	(function(){
 		$('#slider').nivoSlider({
-			 pauseTime: 7000
+			 pauseTime: 3000
 		});
 		console.log('work');
 	})();
