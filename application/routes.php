@@ -34,9 +34,9 @@
 
 Route::get('/', function()
 {
-	$project = Project::order_by('id', 'desc')->take(1)->get();
-	//dd($project);
-	return View::make('home.index', array('project'=>$project));
+	$project = Project::order_by('id', 'desc')->take(1)->first();
+	$screens = $project->screens()->get();
+	return View::make('home.index', array('project'=>$project, 'screens'=>$screens));
 
 });
 

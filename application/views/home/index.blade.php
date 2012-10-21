@@ -13,7 +13,6 @@
 </div>
 
 <?php
-	$screens = $project[0]->screens()->get();
 	foreach($screens as $s){
 		echo "<img src='screenS/".$s->name."' alt='obrazek'/>";
 	} 
