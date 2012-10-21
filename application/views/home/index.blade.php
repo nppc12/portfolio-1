@@ -13,7 +13,7 @@
 </div>
 
 <?php
-	echo $project->id; 
+	echo $project[0]->id; 
 ?>
 {{ HTML::script('js/jquery.nivo.slider.js') }}
 <script type="text/javascript">
