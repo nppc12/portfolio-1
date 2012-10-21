@@ -13,7 +13,10 @@
 </div>
 
 <?php
-	echo $project[0]->id; 
+	$screens = $project[0]->screens()->get();
+	foreach($screens as $s){
+		echo "<img src='screenS/".$s->name."' alt='obrazek'/>";
+	} 
 ?>
 {{ HTML::script('js/jquery.nivo.slider.js') }}
 <script type="text/javascript">
