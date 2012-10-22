@@ -40,6 +40,12 @@ Route::get('/', function()
 
 });
 
+Route::get('project/:id', array(
+	'as'=>'singleProject',
+	function(){
+		return View::make('home.singleProject');
+	}));
+
 Route::get('about', array('as'=>'about', function(){
 	return View::make('home.about');
 }));
