@@ -40,10 +40,14 @@ Route::get('/', function()
 
 });
 
-Route::get('project/:id', array(
-	'as'=>'singleProject',
-	function(){
-		return View::make('home.singleProject');
+Route::get('project/(:num)', array(
+	'as'=>'singleProject', function($projectId){
+		$project = Project::find($projectId);
+		if(!$project){
+			return Response::error('404');
+		}
+		$screens = $project->screens()->get();
+		return View::make('home.single_project',array('project'=>$project, 'screens'=>$screens));
 	}));
 
 Route::get('about', array('as'=>'about', function(){

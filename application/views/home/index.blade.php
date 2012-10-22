@@ -6,7 +6,7 @@
 	<div class="slider-wrapper theme-default">
 	            <div id="slider" class="nivoSlider">
 	            	@foreach ($screens as $s)
-	            	
+	            	<!-- Dodać tu tego linka -->
 	                	<a href=""><img src="screenS/{{ $s->name }}" data-thumb="screenS/toSlider/{{ $s->name }}" alt="" title="{{ $project->name }}" /></a>
 	                @endforeach
 	            </div>
