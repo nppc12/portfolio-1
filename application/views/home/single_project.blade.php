@@ -15,5 +15,5 @@
 		<p class="projectDesc">{{ $project->description }}</p>
 	</div>
 </div>
-<!-- Dodać lightboxa jakiegoś -->
+<!-- Dodać lightboxa jakiegoś i taki efekt przy najezdzaniu jak przy linkach do facebooka, githuba itd -->
 @endsection
